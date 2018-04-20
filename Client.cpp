@@ -20,7 +20,7 @@ void store_message_to_file(message_t m)
 	omessage.open("text.txt");
 	//omessage.open("thefile.txt");
 	omessage << m.sn << endl << m.rn << endl << m.subject << endl << m.body << endl;
-	cout<< m.sn << endl << m.rn << endl << m.subject << endl << m.body << endl;
+	omessage.close("text.txt");
 }
 
 message_t read_message()
