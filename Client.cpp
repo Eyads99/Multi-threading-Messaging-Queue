@@ -34,7 +34,7 @@ message_t read_message()
 	cin>> m.subject;// subject
 	cout << "Please give the body of your message"<<endl;
 	cin >> m.body;
-	//cout << m.sn << endl << m.rn << endl << m.subject << endl << m.body << endl;
+	cout << "success" << endl;
 	return m;
 }
 
