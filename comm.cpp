@@ -24,6 +24,6 @@ string send_to_apache(const string ip_address,const string file_name)
 
 int main ()
 {
-	cout << send_to_apache("192.168.56.101","/Users/kmsobh/work/AUC/AUC_Adjunct/Courses/Spring_2018/CSCE-110/code/message.txt") << endl;
+	cout << send_to_apache("192.168.56.101","C:\Users\eyads\source\repos\Multithreading messaging queue\Multithreading messaging queue\text.txt") << endl;
 //C:\Users\eyads\Desktop\curl
 }
