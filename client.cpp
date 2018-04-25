@@ -50,3 +50,30 @@ int main()
 	//remove_message("message.txt");
 	system("pause");
 }
+/*
+
+The below code is the code that reads a file and copies it into another file while deleting the orginal	
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+	ifstream infile("input.txt");
+	ofstream outfile("output.txt");
+	string str = " ";
+
+	while (!infile.eof())
+	{
+		str += infile.get();
+	}
+
+	infile.close();
+	remove("input.txt");
+	outfile << str;
+	outfile.close();
+}
+*/
