@@ -3,7 +3,7 @@
 #include <string>
 
 using namespace std;
-
+enum command {send, fetch};
 typedef struct message {
 
 	string sn;//sender name
