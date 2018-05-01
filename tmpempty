@@ -1,0 +1,29 @@
+#include <iostream>
+#include <fstream>
+#include <windows.h>
+
+using namespace std;
+
+bool tmpempty()
+{
+	int timeout = 10;
+	ifstream newfile("/tmp/spool");
+	while (true)
+	{
+		if (newfile.fail())
+		{
+
+		}
+		else
+		{
+			return false;
+		}
+		Sleep(timeout);
+	}
+
+
+	int main()
+{
+	tmpempty();
+	return 0;
+}
