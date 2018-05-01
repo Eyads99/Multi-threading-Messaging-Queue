@@ -79,19 +79,21 @@ Message parsing(string fileName, Message m)
 	FILE* message = fopen("filename","r"); 
 	string line[4];
 
+	fseek(message,0,SEEK_END);
+	long size = ftell(message);
+	fseek(message,0,SEEK_SET);
+
 	for(int i=0; i<3; i++)
 	{
 		getline(filename, line[i]);
 		fseek(message,sizeof(line[i]),SEEK_CUR);
 	}
 
-	fseek(message,0,SEEK_END);
-	long size = ftell(message);
 
-	m.receiver = line[0];
-	m.sender = line[1];
-	me.subject = line[2];
-	strncpy(m.message, ftell(message), size); 
+	parsedMessage.receiver = line[0];
+	parsedMessage.sender = line[1];
+	parsedMessage.subject = line[2];
+	strncpy(parsedMessage.message, ftell(message), size); 
 	
 	return m;
 }
