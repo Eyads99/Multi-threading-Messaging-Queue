@@ -37,17 +37,43 @@ message_t read_message()
 	cout << "success" << endl;
 	return m;
 }
-
+void message_info();
+{
+    char info[20]; 
+    cout<<"Please enter the name of the sender to the message you want to fetch"<<endl; 
+    cin>>info; 
+    //function call to the function to store that info and send to appache 
+}
+void ask_user()
+{
+    int result=0; 
+    char operation[10];
+    char send[4]; 
+    char fetch[5]; 
+    memset(send,0,4); 
+    memset(fetch,0,5); 
+    strcpy(send,"Send"); 
+    strcpy(fetch, "fetch"); 
+    cout<<"Would you like to send or fetch your message"<<endl;
+    cin>>operation;
+    result =strcmp(operation, fetch); 
+    if (result==0)
+    {
+        //function call to the function to store the info in a file then return sucess or fail 
+    }
+     else 
+     {
+         message_info();
+     }
+    
+}
 
 int main()
 {
 	message_t m;
 	m=read_message();
 	store_message_to_file(m);
-//	store_message_to_file($m, "message.txt");
-	//string reply = send_to_apache(“127.0.0.1”, ”message.txt”);
-	//cout << reply << endl;
-	//remove_message("message.txt");
+   	ask_user();
 	system("pause");
 }
 /*
