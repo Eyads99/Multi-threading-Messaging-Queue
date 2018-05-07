@@ -89,8 +89,6 @@ int main()
 	system("pause");
 }
 
-
-
 /*
 
 The below code is the code that reads a file and copies it into another file while deleting the orginal	
