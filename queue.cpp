@@ -27,9 +27,9 @@ void main()
 	int timeout = 10;
 	while (true)
 	{
-		if (newfolder(“ / tmp / spool”))
+		if (newfolder(" / tmp / spool"))
 		{
-			string new_folder = get_newfolder(“ / tmp / spool”);
+			string new_folder = get_newfolder(" / tmp / spool");
 			std::thread t(client_thread, new_folder, timeout);
 		}
 		sleep(timeout);
