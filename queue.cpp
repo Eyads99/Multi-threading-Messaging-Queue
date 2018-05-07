@@ -1,4 +1,3 @@
-//the below is just psuedo code 
 
 #include <iostream>
 #include <fstream>
