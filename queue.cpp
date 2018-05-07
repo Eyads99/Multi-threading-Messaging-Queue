@@ -30,7 +30,7 @@ void main()
 		if (newfolder(" / tmp / spool"))
 		{
 			string new_folder = get_newfolder(" / tmp / spool");
-			std::thread t(client_thread, new_folder, timeout);
+			thread t(client_thread, new_folder, timeout);
 		}
 		sleep(timeout);
 	}
