@@ -68,15 +68,6 @@ void ask_user()
     
 }
 
-int main()
-{
-	message_t m;
-	m=read_message();
-	store_message_to_file(m);
-   	ask_user();
-	system("pause");
-}
-
 void sendA() 
 {
 	string str;
@@ -90,9 +81,16 @@ void sendA()
 
 int main()
 {
-
+	message_t m;
+	m=read_message();
+	store_message_to_file(m);
+   	ask_user();
 	sendA();
+	system("pause");
 }
+
+
+
 /*
 
 The below code is the code that reads a file and copies it into another file while deleting the orginal	
