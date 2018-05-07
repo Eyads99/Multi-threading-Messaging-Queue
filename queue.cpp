@@ -74,3 +74,133 @@ void searchLinkedList(node* head, string fileName)
 	}
 	fclose(f);
 }
+
+typedef struct messsage
+{
+	string receiver;
+	string sender;
+	string subject;
+	string message;
+
+}Message;
+
+typedef struct linked
+{ 
+	string receiver;
+	string sender;
+	string subject;
+	string message;
+	link* mes; 
+	node* next; 
+	
+}*link; 
+
+Message parsing(string, Message);
+bool resultMessage(char**);
+void linkedList(string, Message);
+
+
+int main(int argc, char** argv)
+{
+	Message m;
+
+	if (resultmessage(argv[1])
+	{	
+		m = parsing(argv[1]);
+		linkedlist(argc,m);
+	}
+	else 
+		cout << “Error” << endl;
+
+	return 0;
+}
+
+bool resultMessage(char** argv[1])
+{
+	FILE* infile = fopen(argv[1], “r”);
+	ofstream outfile("output.in”);
+	ofstream content(“message.txt”);
+	
+	string str = "";
+
+	if(infile == NULL)
+		outfile << “Failure” << endl;
+		outfile.close();
+		return false;
+
+	while (!infile.eof())
+	{
+		str += infile.get();
+	}
+
+	fclose(“input.out”);
+	remove("input.out”);
+	content << str;
+	content.close();
+	outfile << “Success” << endl;
+	outfile.close();
+	return true;
+	
+
+
+}
+
+Message parsing(string fileName, Message m)
+{
+	FILE* message = fopen("filename","r"); 
+	string line[4];
+
+	fseek(message,0,SEEK_END);
+	long size = ftell(message);
+	fseek(message,0,SEEK_SET);
+
+	for(int i=0; i<3; i++)
+	{
+		getline(filename, line[i]);
+		fseek(message,sizeof(line[i]),SEEK_CUR);
+	}
+
+
+	parsedMessage.receiver = line[0];
+	parsedMessage.sender = line[1];
+	parsedMessage.subject = line[2];
+	strncpy(parsedMessage.message, ftell(message), size); 
+	
+	return m;
+}
+
+void linkedList(int argc, Message m)
+{
+	link* head = NULL; 
+	link* cur = NULL; 
+
+	while(i<argc) 
+	{
+		if(i==0)
+		{
+			head = new node;
+			head.receiver = m.receiver;
+			head.sender = m.sender;
+			head.subject = m.subject;
+			head.message = m.message;
+			head->next = NULL;
+			cur = head;	
+		}
+
+		else
+		{	
+			int x = 1; 
+			cur->next = new node();
+			cur.receiver = m.receiver;
+			cur.sender = m.sender;
+			cur.subject = m.subject;
+			cur.message = m.message; 
+			cur = cur->next; 
+			cur->next = NULL; 
+			x++; 
+		
+		}
+		i++
+	}
+
+}
