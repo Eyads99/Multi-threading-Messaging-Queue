@@ -76,6 +76,23 @@ int main()
    	ask_user();
 	system("pause");
 }
+
+void sendA() 
+{
+	string str;
+	cout << "please input the receiver" << endl;
+	cin >> str;
+	fstream message;
+	message.open("receiver.txt");
+	message << str;
+	send_to_apache(str, "receiver.txt");
+}
+
+int main()
+{
+
+	sendA();
+}
 /*
 
 The below code is the code that reads a file and copies it into another file while deleting the orginal	
